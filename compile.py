@@ -38,7 +38,7 @@ if to_path not in os.listdir():
     os.mkdir(to_path)
 
 for the_dir in all_list:
-    compileall.compile_dir(".", maxlevels=0, legacy=True, optimize=2)
+    compileall.compile_dir(the_dir, maxlevels=0, legacy=True, optimize=2)
 
 # for the_dir in all_list:
 #     os.system(f"python -O -m compileall {the_dir} -b")
