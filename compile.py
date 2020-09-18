@@ -1,7 +1,7 @@
-import compileall
 import hashlib
 import os
 import shutil
+import compileall
 
 
 def is_py_in_dir(path):
@@ -83,3 +83,7 @@ for the_dir in all_list:
                 else:
                     shutil.copy(the_dir + os.sep + i, to_path + os.sep + the_dir + os.sep + i)
                     shutil.copy(the_dir + os.sep + i, to_path_update + os.sep + the_dir + os.sep + i)
+        try:
+            os.rmdir(to_path_update + os.sep + the_dir)
+        except:
+            pass
