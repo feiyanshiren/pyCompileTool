@@ -30,7 +30,7 @@ to_path = "dist"
 to_path_update = "dist_update"
 
 if to_path_update in os.listdir():
-    shutil.rmtree("dist_update")
+    shutil.rmtree(to_path_update)
 
 os.mkdir(to_path_update)
 
